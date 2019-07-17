@@ -1,0 +1,20 @@
+{
+  "name": "ro-fitness-app",
+  "version": "1.0.0",
+  "description": "Rō Fitness App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnavejas/R-Fitness-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnavejas/R-Fitness-App/issues"
+  },
+  "homepage": "https://github.com/dnavejas/R-Fitness-App#readme"
+}
