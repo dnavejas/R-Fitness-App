@@ -5,9 +5,6 @@ import {
   Container,
   Row,
   Col,
-  Form,
-  Input,
-  Button,
   Navbar,
   Nav,
   NavbarBrand,
@@ -16,9 +13,6 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
-
-const AVATAR =
-  "https://www.gravatar.com/avatar/429e504af19fc3e1cfa5c4326ef3394c?s=240&d=mm&r=pg";
 
 const Header = () => (
   <header>
@@ -32,19 +26,15 @@ const Header = () => (
     >
       <Container>
         <Row noGutters className="position-relative w-100 align-items-center">
-          <Col className="d-lg-flex justify-content-start">
+          <Col className="d-xs-flex d-sm-flex justify-content-start">
             <Nav className="mrx-auto" navbar>
-              <UncontrolledDropdown
-                className="d-flex align-items-center"
-                nav
-                inNavbar
-              >
+              <UncontrolledDropdown className="d-flex " nav inNavbar>
                 <DropdownToggle className="font-weight-bold" nav caret>
                   MENU
                 </DropdownToggle>
-                <DropdownMenu right>
+                <DropdownMenu left>
                   <DropdownItem
-                    className="font-weight-bold text-secondary text-uppercase"
+                    className="font-weight-bold text-secondary text-uppercase justify-content-end"
                     header
                     disabled
                   >
@@ -63,27 +53,16 @@ const Header = () => (
             </Nav>
           </Col>
 
-          <Col className="text-center">
-            <NavbarBrand
-              className=" p-0"
-              href="/"
-              //   style={{ width: 100 }}
-            >
-              <img src={logo} alt="logo" className="text-center" />
-            </NavbarBrand>
-          </Col>
-
-          <Col className="d-none d-lg-flex justify-content-end">
-            <Form inline>
-              <Input
-                type="search"
-                className="mr-3"
-                placeholder="Search React Courses"
+          <Col className="">
+            <NavbarBrand className=" p-0" href="/" style={{ width: 10 }}>
+              <img
+                src={logo}
+                alt="logo"
+                width="60"
+                height="60"
+                className="d-inline-block align-top"
               />
-              <Button type="submit" color="info" outline>
-                Search
-              </Button>
-            </Form>
+            </NavbarBrand>
           </Col>
         </Row>
       </Container>
