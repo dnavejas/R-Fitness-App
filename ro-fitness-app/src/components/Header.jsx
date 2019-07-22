@@ -26,23 +26,27 @@ const Header = () => (
     >
       <Container>
         <Row noGutters className="position-relative w-100 align-items-center">
-          <Col className="d-xs-flex d-sm-flex justify-content-start">
+          <Col className="d-xs-flex d-sm-flex justify-content-start text-center">
             <Nav className="mrx-auto" navbar>
-              <UncontrolledDropdown className="d-flex " nav inNavbar>
+              <UncontrolledDropdown className="d-flex text-center" nav inNavbar>
                 <DropdownToggle className="font-weight-bold" nav caret>
                   MENU
                 </DropdownToggle>
-                <DropdownMenu left>
+                <DropdownMenu center>
                   <DropdownItem
-                    className="font-weight-bold text-secondary text-uppercase justify-content-end"
+                    className="font-weight-bold text-secondary text-uppercase justify-content-center"
                     header
                     disabled
                   >
                     Rō FITNESS
                   </DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem href="#">Today's Workout</DropdownItem>
-                  <DropdownItem href="#">Profile</DropdownItem>
+                  <DropdownItem tag="a" href="/blah" class="text-align-center">
+                    Today's Workout
+                  </DropdownItem>
+                  <DropdownItem href="#" class="text-center">
+                    Profile
+                  </DropdownItem>
                   <DropdownItem href="#">Training Log</DropdownItem>
                   <DropdownItem href="#">Personal Records</DropdownItem>
                   <DropdownItem href="#">Speed Wall</DropdownItem>
