@@ -4,9 +4,11 @@ import { Container, Row, Col } from "reactstrap";
 
 import Post from "./components/Workout-post";
 import Header from "./components/Header";
+import WelcomePage from "./components/Welcome";
 
 const App = () => (
   <Fragment>
+    <Route exact={true} path="/" component={Home} />
     <Header />
 
     <main className="my-5 py-5">
