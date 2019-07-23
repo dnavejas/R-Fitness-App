@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
-import axios from "axios";
-import { Container, Row, Col } from "reactstrap";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import Post from "./components/Workout-post";
-import Header from "./components/Header";
+// import axios from "axios";
+// import { Container, Row, Col } from "reactstrap";
+// import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+// import Post from "./components/Workout-post";
+// import Header from "./components/Header";
 import Login from "./components/Login";
 
 const App = () => (
