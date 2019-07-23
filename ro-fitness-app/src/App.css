@@ -18,3 +18,16 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.login-form{
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  height: 100%;
+}
+
+.hello{
+  background-color:#ba2328 !important ;
+  color:#2fa4d0 !important;
+}

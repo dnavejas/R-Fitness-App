@@ -1,4 +1,6 @@
-import React from 'react';
+import React,{Component} from 'react'
+import {Form, FormGroup,Input,Button}from "reactstrap"
+
 
 
 class Login extends Component {
@@ -20,8 +22,7 @@ class Login extends Component {
          <div className="text-center pt-2">Remember me
          </div>
         
-  
-         <div className="text-center">
+          <div className="text-center">
            <a href ="/sign-up">Create New Account</a>
            <span className ="p-2">|</span>
            <a href ="/forgot-password">Forgot Password ?</a>
