@@ -8,7 +8,7 @@ class Post extends Component {
   componentDidMount() {
     axios
       .get(
-        "https://sheets.googleapis.com/v4/spreadsheets/spreadsheetId/values/Sheet1!A1:D5"
+        "https://baconipsum.com/api/?type=meat-and-filler&paras=4&format=text"
       )
       .then(response => this.setState({ post: response.data }));
   }
