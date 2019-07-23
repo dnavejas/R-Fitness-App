@@ -4,12 +4,13 @@ import { Container, Row, Col } from "reactstrap";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import Post from "./components/Workout-post";
 import Header from "./components/Header";
-import WelcomePage from "./components/";
+import Login from "./components/Login";
 
 const App = () => (
   <Fragment>
+    <Login />
     {/* <Route exact={true} path="/" component={Home} /> */}
-    <Header />
+    {/* <Header />
 
     <main className="my-5 py-5">
       <Container className="px-0">
@@ -33,8 +34,8 @@ const App = () => (
             <Post />
           </Col>
         </Row>
-      </Container>
-    </main>
+      </Container>}
+    {/* </main> */}
   </Fragment>
 );
 
