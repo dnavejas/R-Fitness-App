@@ -7,8 +7,8 @@
   height: 40vmin;
   pointer-events: none;
 }
-.hidden{
-  display: none; 
+.hidden {
+  display: none;
 }
 .App-header {
   background-color: #282c34;
@@ -29,15 +29,14 @@
   height: 100%;
 }
 
-<<<<<<< HEAD
-.hello{
-  background-color:#ba2328 !important ;
-  color:#2fa4d0 !important;
+.hello {
+  background-color: #ba2328 !important ;
+  color: #2fa4d0 !important;
 }
 
 .bottom-div {
   position: relative;
-=======
+}
 .hello {
   background-color: #ba2328 !important ;
   color: #2fa4d0 !important;
@@ -61,11 +60,4 @@
 }
 body {
   font-family: Myriad Pro;
-}
-#noanim-tab-example-tab-5k,
-/* #noanim-tab-example-tab-10k,
-#noanim-tab-example-tab-13-1miles,
-#noanim-tab-example-tab-26-2miles*/ {
-  display: block !important;
->>>>>>> 90fd09acfb0188dfd209a7f204a03c913f0cfa3f
 }

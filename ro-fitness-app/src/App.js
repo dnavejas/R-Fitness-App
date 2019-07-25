@@ -1,48 +1,26 @@
 import React, { Fragment } from "react";
-// import axios from "axios";
-// import { Container, Row, Col } from "reactstrap";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-// import Post from "./components/Workout-post";
-// import Header from "./components/Header";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import WorkoutPosts from "./components/Workout-post";
+import Header from "./components/Header";
 import Login from "./components/Login";
 import CreateAccount from "./components/CreateAccount";
 import ForgotPassword from "./components/ForgotPassword";
-import Profile from "./components/Profile"; 
-
-const App = () => (
-  <Router>
-    <div>
-      <Fragment>
-        <Route path="/" exact strict render={ () => {
-          return <Login />;
-        }} />
-        <Route path="/create-account" exact strict render={ () => {
-          return <CreateAccount/>;
-        }} />
-         <Route path="/forgot-password" exact strict render={ () => {
-          return <ForgotPassword/>;
-        }} />
-        <Route path="/profile" exact strict render={ () => {
-          return <Profile/>;
-        }} />
-      </Fragment>
-    </div>
-  </Router>
-  );
-  //<Fragment>
-    
-     <Route exact={true} path="/" component={Home} /> 
-   <Header />
-
+import Profile from "./components/Profile";
+import SpeedWall from "./components/Speed-wall";
+import PersonalRecords from "./components/Personal-Records";
 import "./App.css";
 
 const App = () => (
   <Router>
     <Fragment>
+      <Route path="/" exact={true} component={Login} />
       <Route path="/:id" component={Header} />
-      <Route exact={true} path="/" component={Login} />
-      <Route exact={true} path="/Workouts" component={WorkoutPosts} />
-      <Route exact={true} path="/Speedwall" component={SpeedWall} />
+      <Route path="/create-account" exact={true} component={CreateAccount} />
+      <Route path="/forgot-password" exact={true} component={ForgotPassword} />
+      <Route path="/profile" component={Profile} />
+      <Route path="/Workouts" exact={true} component={WorkoutPosts} />
+      <Route path="/Speedwall" exact={true} component={SpeedWall} />
+      <Route path="/Personalrecords" exact={true} component={PersonalRecords} />
     </Fragment>
   </Router>
 );
