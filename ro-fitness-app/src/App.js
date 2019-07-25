@@ -6,6 +6,11 @@ import Header from "./components/Header";
 import Login from "./components/Login";
 import SpeedWall from "./components/Speed-wall";
 
+import "bootstrap/dist/css/bootstrap.css";
+// import "https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css";
+
+import "./App.css";
+
 const App = () => (
   <Router>
     <Fragment>

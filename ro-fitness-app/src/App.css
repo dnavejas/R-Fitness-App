@@ -31,9 +31,11 @@
   background-color: #ba2328 !important ;
   color: #2fa4d0 !important;
 }
+
 .tabs {
   justify-content: center !important;
 }
+
 .active {
   background-color: #ba2328 !important;
   color: white !important ;

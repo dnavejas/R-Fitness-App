@@ -15,6 +15,8 @@ import {
   DropdownItem
 } from "reactstrap";
 
+import "../App.css";
+
 class Header extends Component {
   render() {
     return (
