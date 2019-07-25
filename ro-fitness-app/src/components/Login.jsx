@@ -24,7 +24,7 @@ class Login extends Component {
          </div>
         
           <div className="text-center">
-           <a href ="/sign-up">Create New Account</a>
+           <a href ="/create-account">Create New Account</a>
            <span className ="p-2">|</span>
            <a href ="/forgot-password">Forgot Password ?</a>
          </div>

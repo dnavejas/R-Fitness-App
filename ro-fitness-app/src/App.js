@@ -1,16 +1,38 @@
 import React, { Fragment } from "react";
 // import axios from "axios";
 // import { Container, Row, Col } from "reactstrap";
-// import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 // import Post from "./components/Workout-post";
 // import Header from "./components/Header";
 import Login from "./components/Login";
+import CreateAccount from "./components/CreateAccount";
+import ForgotPassword from "./components/ForgotPassword";
+import Profile from "./components/Profile"; 
 
 const App = () => (
-  <Fragment>
-    <Login />
-    {/* <Route exact={true} path="/" component={Home} /> */}
-    {/* <Header />
+  <Router>
+    <div>
+      <Fragment>
+        <Route path="/" exact strict render={ () => {
+          return <Login />;
+        }} />
+        <Route path="/create-account" exact strict render={ () => {
+          return <CreateAccount/>;
+        }} />
+         <Route path="/forgot-password" exact strict render={ () => {
+          return <ForgotPassword/>;
+        }} />
+        <Route path="/profile" exact strict render={ () => {
+          return <Profile/>;
+        }} />
+      </Fragment>
+    </div>
+  </Router>
+  );
+  //<Fragment>
+    
+    /* <Route exact={true} path="/" component={Home} /> */
+    /* <Header />
 
     <main className="my-5 py-5">
       <Container className="px-0">
@@ -35,8 +57,8 @@ const App = () => (
           </Col>
         </Row>
       </Container>}
-    {/* </main> */}
-  </Fragment>
-);
+    {/* </main> */
+  //</Fragment>
+
 
 export default App;
