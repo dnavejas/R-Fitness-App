@@ -1,8 +1,11 @@
 import React, { Component, Fragment } from "react";
 import axios from "axios";
-import { Badge } from "reactstrap";
+import { Badge, Button } from "reactstrap";
 class WelcomePage extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   componentDidMount() {
     axios
       .get(
@@ -26,6 +29,7 @@ class WelcomePage extends Component {
                 New
               </Badge>
             </span>
+            <div>{this.state.post}</div>
           </div>
         )}
       </Fragment>
