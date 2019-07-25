@@ -23,10 +23,6 @@ class SpeedWall extends Component {
                 <Tab eventKey="500m" title="500m" id="five-hundred" />
                 <Tab eventKey="1K" title="1K" id="one-thousand" />
                 <Tab eventKey="2K" title="2K" id="two-thousand" />
-                {/* </Tabs>
-            </Row>
-            <Row>
-              <Tabs className="tabs"> */}
                 <Tab eventKey="5K" title="5K" id="fiveK" />
                 <Tab eventKey="10K" title="10K" id="tenK" />
                 <Tab
@@ -42,7 +38,13 @@ class SpeedWall extends Component {
               </Tabs>
             </Row>
           </Container>
-          // <Records></Records>
+        }
+        {
+          <Container>
+            <Row>
+              <div id="records" />
+            </Row>
+          </Container>
         }
       </Fragment>
     );
