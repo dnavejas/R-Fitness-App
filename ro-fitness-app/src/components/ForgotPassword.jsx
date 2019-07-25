@@ -14,11 +14,8 @@ class ForgotPassword extends Component {
     render() {
         return (
             <Form className="login-form">
-                <h2 className="text-center">Ro</h2>
-                <div className={this.state.shouldHide ? "hidden" : ""}>
-                    <span className="font-weight-bold"><h5 className="text-center">Fitness</h5></span>
+                             <div className={this.state.shouldHide ? "hidden" : ""}>
                     <FormGroup>
-
                         <Input type="username" className="text-center" placeholder="Username"></Input>
                     </FormGroup>
                     <div className="bottom-div">
