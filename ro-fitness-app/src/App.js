@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import WorkoutPosts from "./components/Workout-post";
-import Header from "./components/Header";
+import NavBar from "./components/NavBar";
 import Login from "./components/Login";
 import CreateAccount from "./components/CreateAccount";
 import ForgotPassword from "./components/ForgotPassword";
@@ -14,7 +14,7 @@ const App = () => (
   <Router>
     <Fragment>
       <Route path="/" exact={true} component={Login} />
-      <Route path="/:id" component={Header} />
+      <Route path="/:id" component={NavBar} />
       <Route path="/Create-account" exact={true} component={CreateAccount} />
       <Route path="/Forgot-password" exact={true} component={ForgotPassword} />
       <Route path="/Profile" component={Profile} />

@@ -53,21 +53,41 @@ class Header extends Component {
                           Rō FITNESS
                         </DropdownItem>
                         <DropdownItem divider />
-                        <DropdownItem
-                          tag="a"
-                          href="/blah"
-                          className="text-align-center"
-                        >
-                          Today's Workout
+                        <DropdownItem className="text-center ">
+                          <Link to={"/"} className="nav-link">
+                            Today's Workout
+                          </Link>
                         </DropdownItem>
-                        <DropdownItem className="text-center">
-                          <Link to={"/Welcome"}>Profile</Link>
+                        <DropdownItem className="text-center ">
+                          <Link to={"/Profile"} className="nav-link">
+                            Profile
+                          </Link>
                         </DropdownItem>
-                        <DropdownItem href="#">Training Log</DropdownItem>
-                        <DropdownItem href="#">Personal Records</DropdownItem>
-                        <DropdownItem href="#">Speed Wall</DropdownItem>
-                        <DropdownItem href="#">Concept2 Logbook</DropdownItem>
-                        <DropdownItem href="#">Log Out</DropdownItem>
+                        <DropdownItem className="text-center ">
+                          <Link to={"/"} className="nav-link">
+                            Training Log
+                          </Link>
+                        </DropdownItem>
+                        <DropdownItem className="text-center ">
+                          <Link to={"/"} className="nav-link">
+                            Personal Records
+                          </Link>
+                        </DropdownItem>
+                        <DropdownItem className="text-center ">
+                          <Link to={"/"} className="nav-link">
+                            Speed Wall
+                          </Link>
+                        </DropdownItem>
+                        <DropdownItem className="text-center ">
+                          <Link to={"/"} className="nav-link">
+                            Concept2 Logbook
+                          </Link>
+                        </DropdownItem>
+                        <DropdownItem className="text-center nav-link">
+                          <Link to={"/"} className="nav-link">
+                            Log Out
+                          </Link>
+                        </DropdownItem>
                       </DropdownMenu>
                     </UncontrolledDropdown>
                   </Nav>
