@@ -57,3 +57,8 @@ body {
 .nav-link {
   color: black;
 }
+.personal-records {
+  border: solid red 2px;
+  border-radius: 5px;
+  margin: 10px 10px 30px 10px;
+}

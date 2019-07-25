@@ -46,11 +46,13 @@ class Header extends Component {
                       </DropdownToggle>
                       <DropdownMenu center="true">
                         <DropdownItem
-                          className="font-weight-bold text-secondary text-uppercase justify-content-center"
+                          className="font-weight-bold text-secondary text-uppercase justify-content-center text-center"
                           header
                           disabled
                         >
-                          Rō FITNESS
+                          <Link to={"/Welcome"} className="nav-link">
+                            Rō FITNESS
+                          </Link>
                         </DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem className="text-center ">
