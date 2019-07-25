@@ -2,9 +2,6 @@ import React, { Component, Fragment } from "react";
 import axios from "axios";
 import { Badge, Button } from "reactstrap";
 
-const buttonStyle = {
-  backgroundColor: "#ba2328 !important"
-};
 class WelcomePage extends Component {
   constructor(props) {
     super(props);
@@ -35,11 +32,7 @@ class WelcomePage extends Component {
             </span>
             <div>{this.state.post}</div>
             <div className="text-center">
-              <Button
-                href="/Workouts"
-                className="text-center"
-                style={buttonStyle}
-              >
+              <Button href="/Workouts" className="welcome-button text-center">
                 Let's RŌ!
               </Button>
             </div>
