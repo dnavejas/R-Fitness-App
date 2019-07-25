@@ -21,7 +21,7 @@
   color: white;
 }
 
-.login-form{
+.login-form {
   width: 100%;
   max-width: 330px;
   padding: 15px;
@@ -29,6 +29,7 @@
   height: 100%;
 }
 
+<<<<<<< HEAD
 .hello{
   background-color:#ba2328 !important ;
   color:#2fa4d0 !important;
@@ -36,4 +37,35 @@
 
 .bottom-div {
   position: relative;
+=======
+.hello {
+  background-color: #ba2328 !important ;
+  color: #2fa4d0 !important;
+}
+
+.tabs {
+  justify-content: center !important;
+}
+
+.active {
+  background-color: #ba2328 !important;
+  color: white !important ;
+}
+.tabs * {
+  /* margin: 2px !important; */
+  border: solid 1px white !important;
+  display: flex !important;
+  color: white;
+  background-color: gray;
+  text-align: center;
+}
+body {
+  font-family: Myriad Pro;
+}
+#noanim-tab-example-tab-5k,
+/* #noanim-tab-example-tab-10k,
+#noanim-tab-example-tab-13-1miles,
+#noanim-tab-example-tab-26-2miles*/ {
+  display: block !important;
+>>>>>>> 90fd09acfb0188dfd209a7f204a03c913f0cfa3f
 }

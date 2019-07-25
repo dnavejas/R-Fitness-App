@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+<<<<<<< HEAD
 // import axios from "axios";
 // import { Container, Row, Col } from "reactstrap";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
@@ -33,20 +34,21 @@ const App = () => (
     
     /* <Route exact={true} path="/" component={Home} /> */
     /* <Header />
+=======
 
-    <main className="my-5 py-5">
-      <Container className="px-0">
-        <Row
-          noGutters
-          className="pt-2 pt-md-5 w-100 px-4 px-xl-0 position-relative"
-        >
-          <Col
-            xs={{ order: 2 }}
-            md={{ size: 4, order: 1 }}
-            tag="aside"
-            className="pb-5 mb-5 pb-md-0 mb-md-0 mx-auto mx-md-0"
-          />
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import WorkoutPosts from "./components/Workout-post";
+import Header from "./components/Header";
+import Login from "./components/Login";
+import SpeedWall from "./components/Speed-wall";
 
+import "bootstrap/dist/css/bootstrap.css";
+// import "https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css";
+>>>>>>> 90fd09acfb0188dfd209a7f204a03c913f0cfa3f
+
+import "./App.css";
+
+<<<<<<< HEAD
           <Col
             xs={{ order: 1 }}
             md={{ size: 7, offset: 1 }}
@@ -60,5 +62,17 @@ const App = () => (
     {/* </main> */
   //</Fragment>
 
+=======
+const App = () => (
+  <Router>
+    <Fragment>
+      <Route path="/:id" component={Header} />
+      <Route exact={true} path="/" component={Login} />
+      <Route exact={true} path="/Workouts" component={WorkoutPosts} />
+      <Route exact={true} path="/Speedwall" component={SpeedWall} />
+    </Fragment>
+  </Router>
+);
+>>>>>>> 90fd09acfb0188dfd209a7f204a03c913f0cfa3f
 
 export default App;
