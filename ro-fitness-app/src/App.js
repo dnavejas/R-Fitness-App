@@ -15,9 +15,9 @@ const App = () => (
     <Fragment>
       <Route path="/" exact={true} component={Login} />
       <Route path="/:id" component={Header} />
-      <Route path="/create-account" exact={true} component={CreateAccount} />
-      <Route path="/forgot-password" exact={true} component={ForgotPassword} />
-      <Route path="/profile" component={Profile} />
+      <Route path="/Create-account" exact={true} component={CreateAccount} />
+      <Route path="/Forgot-password" exact={true} component={ForgotPassword} />
+      <Route path="/Profile" component={Profile} />
       <Route path="/Workouts" exact={true} component={WorkoutPosts} />
       <Route path="/Speedwall" exact={true} component={SpeedWall} />
       <Route path="/Personalrecords" exact={true} component={PersonalRecords} />
