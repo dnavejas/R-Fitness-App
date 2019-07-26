@@ -11,6 +11,7 @@ import PersonalRecords from "./components/Personal-Records";
 import Welcome from "./components/Welcome";
 import TrainingLog from "./components/TrainingLog";
 import "./App.css";
+import LogWorkout from "./components/LogWorkout";
 
 const App = () => (
   <Router>
@@ -24,6 +25,7 @@ const App = () => (
       <Route path="/Workouts" exact={true} component={WorkoutPosts} />
       <Route path="/Speedwall" exact={true} component={SpeedWall} />
       <Route path="/Traininglogs" exact={true} component={TrainingLog} />
+      <Route path="/Logworkout" exact={true} component={LogWorkout} />
       <Route path="/Personalrecords" exact={true} component={PersonalRecords} />
     </Fragment>
   </Router>

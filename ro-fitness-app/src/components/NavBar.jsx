@@ -56,7 +56,7 @@ class Header extends Component {
                         </DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem className="text-center ">
-                          <Link to={"/"} className="nav-link">
+                          <Link to={"/Workouts"} className="nav-link">
                             Today's Workout
                           </Link>
                         </DropdownItem>
@@ -66,22 +66,22 @@ class Header extends Component {
                           </Link>
                         </DropdownItem>
                         <DropdownItem className="text-center ">
-                          <Link to={"/TrainingLogs"} className="nav-link">
+                          <Link to={"/Traininglogs"} className="nav-link">
                             Training Log
                           </Link>
                         </DropdownItem>
                         <DropdownItem className="text-center ">
-                          <Link to={"/"} className="nav-link">
+                          <Link to={"/Personalrecords"} className="nav-link">
                             Personal Records
                           </Link>
                         </DropdownItem>
                         <DropdownItem className="text-center ">
-                          <Link to={"/"} className="nav-link">
+                          <Link to={"/Speedwall"} className="nav-link">
                             Speed Wall
                           </Link>
                         </DropdownItem>
                         <DropdownItem className="text-center ">
-                          <Link to={"/"} className="nav-link">
+                          <Link to={"/Concept2"} className="nav-link">
                             Concept2 Logbook
                           </Link>
                         </DropdownItem>
