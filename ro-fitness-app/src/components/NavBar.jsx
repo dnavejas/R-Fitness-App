@@ -66,7 +66,7 @@ class Header extends Component {
                           </Link>
                         </DropdownItem>
                         <DropdownItem className="text-center ">
-                          <Link to={"/"} className="nav-link">
+                          <Link to={"/TrainingLogs"} className="nav-link">
                             Training Log
                           </Link>
                         </DropdownItem>
