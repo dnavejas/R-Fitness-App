@@ -6,10 +6,10 @@ class Login extends Component {
   render() {
     return (
       <Form className="login-form">
-        <h2 className="text-center">Ro</h2>
+        {/* <h2 className="text-center">Ro</h2>
         <span className="font-weight-bold">
           <h5 className="text-center">Fitness</h5>
-        </span>
+        </span> */}
         <FormGroup>
           {/* <Label>Email</Label> */}
           <Input
