@@ -9,6 +9,7 @@ import Profile from "./components/Profile";
 import SpeedWall from "./components/Speed-wall";
 import PersonalRecords from "./components/Personal-Records";
 import Welcome from "./components/Welcome";
+import TrainingLog from "./components/TrainingLog";
 import "./App.css";
 
 const App = () => (
@@ -22,6 +23,7 @@ const App = () => (
       <Route path="/Welcome" exact={true} component={Welcome} />
       <Route path="/Workouts" exact={true} component={WorkoutPosts} />
       <Route path="/Speedwall" exact={true} component={SpeedWall} />
+      <Route path="/Traininglogs" exact={true} component={TrainingLog} />
       <Route path="/Personalrecords" exact={true} component={PersonalRecords} />
     </Fragment>
   </Router>
