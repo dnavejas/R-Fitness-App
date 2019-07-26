@@ -32,7 +32,9 @@
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "react-bootstrap": "^1.0.0-beta.9",
+    "react-calendar": "^2.19.0",
     "react-document-title": "^2.0.3",
+    "react-icons": "^3.7.0",
     "react-router-dom": "^5.0.1",
     "reactstrap": "^8.0.1"
   },
