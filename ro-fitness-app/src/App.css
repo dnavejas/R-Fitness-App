@@ -44,10 +44,7 @@ tr {
 .bottom-div {
   position: relative;
 }
-.hello {
-  background-color: #ba2328 !important ;
-  color: #2fa4d0 !important;
-}
+
 .tabs {
   justify-content: center !important;
 }
@@ -72,4 +69,10 @@ tr {
 }
 .welcome-button {
   background-color: #ba2328 !important;
+}
+.space{
+  padding: 80px 50px 0px;
+}
+.space1{
+  padding-top: 90px;
 }
