@@ -1,9 +1,19 @@
-// c
-// var mongoose = require("mongoose"); 
+var express = require("express"); 
+var mongoose = require("mongoose"); 
+const app = express(); 
+const PORT = process.env.PORT || 5000; 
+
+// app.use(express.json());
+// app.use(express.urlencoded({extended: true})); 
+
+
 
 // var User = require("./models/UserShema.jsx"); 
+// mongoose.connect("mongodb://localhost/liliadb");
 
-// mongoose.connect("mongodb://localhost/liliaDatabase", {useNewUrlParser: true}); 
+// app.listen(PORT, () => {
+//   console.log(`Application is now running on ${PORT}`); 
+// }); 
 // // lastName, firstName, emailAddress, birthday, location, gender, 
 // var person = {
 //   firstName: "Joe", 
