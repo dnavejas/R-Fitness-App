@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { Form, FormGroup, Input, Button } from "reactstrap"
 import '../App.css';
 
-
-
 class CreateAccount extends Component {
   state = {
     shouldHide: false
