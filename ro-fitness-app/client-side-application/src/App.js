@@ -5,13 +5,12 @@ import NavBar from "./components/NavBar";
 import Login from "./components/Login";
 import CreateAccount from "./components/CreateAccount";
 import ForgotPassword from "./components/ForgotPassword";
-import AccountNew from "./components/Account";
-import Profile from "./components/Profile";
 import SpeedWall from "./components/Speed-wall";
 import PersonalRecords from "./components/Personal-Records";
 import Welcome from "./components/Welcome";
 import TrainingLog from "./components/TrainingLog";
 import "./App.css";
+import EditAccount from "./components/EditAccount";
 
 const App = () => (
   <Router>
@@ -20,8 +19,7 @@ const App = () => (
       <Route path="/:id" component={NavBar} />
       <Route path="/Create-account" exact={true} component={CreateAccount} />
       <Route path="/Forgot-password" exact={true} component={ForgotPassword} />
-      <Route path="/Profile" exact={true} component={Profile} />
-      <Route path="/AccountNew"  exact={true} component={AccountNew} />
+      <Route path="/Profile" exact={true} component={EditAccount} />
       <Route path="/Welcome" exact={true} component={Welcome} />
       <Route path="/Workouts" exact={true} component={WorkoutPosts} />
       <Route path="/Speedwall" exact={true} component={SpeedWall} />

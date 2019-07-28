@@ -8,11 +8,13 @@
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.6.7",
+    "nodemailer": "^6.3.0",
     "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "sendmail": "^1.6.1",
     "sequelize": "^5.10.3"
   },
   "devDependencies": {
@@ -20,7 +22,7 @@
   },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start:dev": "concurrently \"nodemon --ignore 'client-side-application/*'\" \"npm run client\"",
     "start:prod": "node index.js",
     "build": "react-scripts build",
     "client": "cd client-side-application && npm run start",

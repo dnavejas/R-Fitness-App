@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Input, Button } from "reactstrap"
 import '../App.css';
-
-
-
-class AccountNew extends Component {
+// encrypted password 
+class EditAccount extends Component {
   state = {
     shouldHide: false
   }
@@ -17,25 +15,25 @@ class AccountNew extends Component {
         <div className={this.state.shouldHide ? "hidden" : ""}>
           <FormGroup>
             <label>First Name</label>
-            <Input type="name" className="text-center" placeholder="First Name"></Input>
+            <Input type="name" className="text-center" placeholder="First Name" disabled={"disabled"} ></Input>
           </FormGroup>
           <FormGroup>
             <label>Last Name</label>
-            <Input type="name" className="text-center" placeholder="Last Name"></Input>
+            <Input type="name" className="text-center" placeholder="Last Name" disabled={"disabled"} ></Input>
           </FormGroup>
           <FormGroup>
             <label>Email</label>
-            <Input type="email" className="text-center" placeholder="Email"></Input>
+            <Input type="email" className="text-center" placeholder="Email" disabled={"disabled"} ></Input>
           </FormGroup>
           <FormGroup>
             <label>Birthday</label>
-            <Input type="date" className="text-center" placeholder="birthday"></Input>
+            <Input type="date" className="text-center" placeholder="birthday" disabled={"disabled"} ></Input>
             <label>Gender</label>
-            <Input type="text" className="text-center" placeholder="gender"></Input>
+            <Input type="text" className="text-center" placeholder="gender" disabled={"disabled"} ></Input>
           </FormGroup>
           <FormGroup>
             <label>Location</label>
-            <Input type="text" className="text-center" placeholder="Location"></Input>
+            <Input type="text" className="text-center" placeholder="Location" disabled={"disabled"} ></Input>
           </FormGroup>
           <Button className="btn-lg hello btn-block" onClick={this.hide}>Edit Profile</Button>
 
@@ -43,25 +41,25 @@ class AccountNew extends Component {
         <div className={this.state.shouldHide ? "" : "hidden"}>
         <FormGroup>
             <label>First Name</label>
-            <Input type="name" className="text-center" placeholder="First Name"></Input>
+            <Input type="name" className="text-center" placeholder="First Name" disabled={"disabled"} ></Input>
           </FormGroup>
           <FormGroup>
             <label>Last Name</label>
-            <Input type="name" className="text-center" placeholder="Last Name"></Input>
+            <Input type="name" className="text-center" placeholder="Last Name" disabled={"disabled"} ></Input>
           </FormGroup>
           <FormGroup>
             <label>Email</label>
-            <Input type="email" className="text-center" placeholder="Email"></Input>
+            <Input type="email" className="text-center" placeholder="Email" disabled={"disabled"} ></Input>
           </FormGroup>
           <FormGroup>
             <label>Birthday</label>
-            <Input type="date" className="text-center" placeholder="birthday"></Input>
+            <Input type="date" className="text-center" placeholder="birthday" disabled={"disabled"} ></Input>
             <label>Gender</label>
-            <Input type="text" className="text-center" placeholder="gender"></Input>
+            <Input type="text" className="text-center" placeholder="gender" disabled={"disabled"} ></Input>
           </FormGroup>
           <FormGroup>
             <label>Location</label>
-            <Input type="text" className="text-center" placeholder="Location"></Input>
+            <Input type="text" className="text-center" placeholder="Location" disabled={"disabled"} ></Input>
           </FormGroup>
           <Button className="btn-lg hello btn-block" onClick={this.hide}>Edit Profile</Button>
 
@@ -71,4 +69,4 @@ class AccountNew extends Component {
     );
   }
 }
-export default AccountNew;
+export default EditAccount;

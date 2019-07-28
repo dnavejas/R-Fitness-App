@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import { Form, FormGroup, Input, Button } from "reactstrap";
-import "../App.css"; 
+import "../App.css";
+import NavBar from "./NavBarNoMenu"; 
 
 class Login extends Component {
   render() {
     return (
+      <div>
+        <NavBar />
       <Form className="login-form">
         {/* <h2 className="text-center">Ro</h2>
         <span className="font-weight-bold">
@@ -39,6 +42,7 @@ class Login extends Component {
           <a href="/forgot-password">Forgot Password ?</a>
         </div>
       </Form>
+      </div>
     );
   }
 }
