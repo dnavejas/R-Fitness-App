@@ -1,5 +1,5 @@
 body {
-  font-family: Myriad Pro;
+  /* font-family: Myriad Pro; */
 }
 th {
   background-color: gray;
@@ -39,7 +39,7 @@ tr {
 }
 .hello {
   background-color: #ba2328 !important ;
-  color: #2fa4d0 !important;
+  color: #ffffff !important;
 }
 .bottom-div {
   position: relative;
@@ -70,9 +70,9 @@ tr {
 .welcome-button {
   background-color: #ba2328 !important;
 }
-.space{
+.space {
   padding: 80px 50px 0px;
 }
-.space1{
+.space1 {
   padding-top: 90px;
 }

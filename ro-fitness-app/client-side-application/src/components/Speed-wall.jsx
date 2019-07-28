@@ -6,7 +6,7 @@ import Meters100 from "./speed-wall-components/Meters-100";
 import Meters250 from "./speed-wall-components/Meters-250";
 import Meters500 from "./speed-wall-components/Meters-500";
 import Meters1K from "./speed-wall-components/Meters-1k";
-import Meters2K from "./speed-wall-components/Meters-2K";
+//import Meters2K from "./speed-wall-components/Meters-2K";
 import Meters5K from "./speed-wall-components/Meters-5k";
 import Meters10K from "./speed-wall-components/Meters-10k";
 import Miles13 from "./speed-wall-components/Miles-13";
@@ -40,9 +40,9 @@ class SpeedWall extends Component {
                 <Tab eventKey="1K" title="1K" id="one-thousand">
                   <Meters1K />
                 </Tab>
-                <Tab eventKey="2K" title="2K" id="two-thousand">
+                {/* <Tab eventKey="2K" title="2K" id="two-thousand">
                   <Meters2K />
-                </Tab>
+                </Tab> */}
                 <Tab eventKey="5K" title="5K" id="fiveK">
                   <Meters5K />
                 </Tab>
