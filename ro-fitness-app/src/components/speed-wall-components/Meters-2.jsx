@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 
-class Meters5K extends Component {
+class Meters2 extends Component {
   state = {};
   render() {
     return (
@@ -11,4 +11,4 @@ class Meters5K extends Component {
   }
 }
 
-export default Meters5K;
+export default Meters2;

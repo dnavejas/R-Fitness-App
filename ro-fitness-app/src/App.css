@@ -76,3 +76,11 @@ tr {
 .space1{
   padding-top: 90px;
 }
+
+.gender {
+  float: right;
+}
+
+.birthday {
+  float:left; 
+}
