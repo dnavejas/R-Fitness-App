@@ -11,8 +11,7 @@ class EditAccount extends Component {
     this.onChangeLN = this.onChangeLN.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangeGEN = this.onChangeGEN.bind(this);
-    this.onChangePass = this.onChangePass.bind(this);
-    this.onChangeConfirmPass = this.onChangeConfirmPass.bind(this);
+    this.onChangeWeight = this.onChangeWeight.bind(this);
     this.onChangeBD = this.onChangeBD.bind(this);
     this.onChangeLOC = this.onChangeLOC.bind(this);
     this.onSendData = this.onSendData.bind(this);
@@ -23,6 +22,7 @@ class EditAccount extends Component {
         lastName:"Ribac",
         email: 'gmaile@gmai.com',
         gender: 'male',
+        weight: 100, 
         location: 'location',
         birthday: '01/21/2009',
         password: 'adfad',
@@ -30,14 +30,13 @@ class EditAccount extends Component {
     }
     axios.get('http://localhost:4000/api/users/currentUser')
     .then(res => {
-        console.log("Back to React");
         console.log(res.data); 
         this.state.firstName = res.data.firstName; 
-        this.state.lastName = res.data.firstName; 
+        this.state.lastName = res.data.lastName; 
         this.state.email = res.data.emailAddress; 
         this.state.gender = res.data.gender; 
+        this.state.weight = res.data.weight; 
         this.state.location = res.data.location; 
-        this.state.firstName = res.data.firstName; 
     }).catch(err => console.log(err));
     
   }
@@ -72,14 +71,9 @@ class EditAccount extends Component {
       gender: e.target.value
     });
   }
-  onChangePass(e){
-    this.setState({
-      password: e.target.value
-    });
-  }
-  onChangeConfirmPass(e){
-    this.setState({
-      confirmPassword: e.target.value
+    onChangeWeight(e){
+      this.setState({
+        weight: e.target.value
     });
   }
   onSendData(e) {
@@ -90,6 +84,7 @@ class EditAccount extends Component {
         lastName: this.state.lastName,
         emailAddress: this.state.email, 
         gender: this.state.gender,
+        weight: this.state.weight, 
         location: this.state.location, 
         birthday: this.state.birthday, 
         password: this.state.password
@@ -106,6 +101,7 @@ class EditAccount extends Component {
       lastName: '',
       email: '',
       gender: '',
+      weight:'', 
       location: '',
       birthday: '',
       password: '',
@@ -117,10 +113,17 @@ class EditAccount extends Component {
   hide = () => {
     this.setState({ shouldHide: true });
   }
+
+  unhide = () => {
+    this.setState({ shouldHide: true });
+  }
+
   render() {
     return (
+      <div>
       <Form className="login-form">
         <div className={this.state.shouldHide ? "hidden" : ""}>
+          {/* <h1>Account</h1> */}
           <FormGroup>
             <label>First Name</label>
             <Input type="name" className="text-center" placeholder="First Name" disabled={"disabled"} value={this.state.firstName} onChange={this.onChangeFN}></Input>
@@ -133,66 +136,74 @@ class EditAccount extends Component {
             <label>Email</label>
             <Input type="email" className="text-center" placeholder="Email" disabled={"disabled"} value={this.state.email} onChange={this.onChangeEmail}></Input>
           </FormGroup>
-          <FormGroup>
-            <div>
-            <div className="birthday">
-            <label>Birthday</label>
-            <Input type="date" className="text-center" placeholder="birthday" disabled={"disabled"} value={this.state.birthday} onChange={this.onChangeBD}></Input>
+           <FormGroup>
+              <label>Birthday</label>
+              <Input type="date" className="text-center" placeholder="MM/YYYY"  disabled={"disabled"} value={this.state.birthday} onChange={this.onChangeBD}></Input>            </FormGroup>
+            <FormGroup>
+            <div className="row">  
+              <div className="col-sm-5">
+                <label>Weight</label>
+                <Input type="number" disabled={"disabled"} className="text-center" placeholder="Weight" value={this.state.weight} onChange={this.onChangeWeight}></Input>
+              </div>  
+              <div className="col-sm-7">
+                <label>Gender</label>
+               <Input type="text" className="text-center" placeholder="gender (M or F)" disabled={"disabled"} value={this.state.gender} onChange={this.onChangeGEN} maxLength={1}></Input>
+              </div>
             </div>
-            <div className="gender">
-            <label>Gender</label>
-            <Input type="text" className="text-center" placeholder="gender" disabled={"disabled"} value={this.state.gender} onChange={this.onChangeGEN}></Input>
-            </div>
-            </div>
-                        
+           
           </FormGroup>
           <FormGroup>
             <label>Location</label>
             <Input type="text" className="text-center" placeholder="Location" disabled={"disabled"} value={this.state.location} onChange={this.onChangeLOC}></Input>
           </FormGroup>
+
           <Button className="btn-lg hello btn-block" onClick={this.hide}>Edit Profile</Button>
 
-        </div>
-        <div className={this.state.shouldHide ? "" : "hidden"}>
-        <FormGroup>
-         <label>Password</label>
-           <Input type="password" className="text-center"placeholder="Password"></Input>
-         </FormGroup>
-            <h5>Password requirements:</h5>
-            <p>At least 8 characters</p>
-            <p>Includes 1 upper, 1 lower, 1 number</p>
-            <p>No special characters</p>
-         <FormGroup>
-         <label>Confirm Password</label>
-           <Input type="password" className="text-center"placeholder="Confirm Password"></Input>
-         </FormGroup>
-        <FormGroup>
-              <label>First Name</label>
-            <Input type="name" className="text-center" placeholder="First Name" disabled={"disabled"} ></Input>
-          </FormGroup>
-          <FormGroup>
-            <label>Last Name</label>
-            <Input type="name" className="text-center" placeholder="Last Name" disabled={"disabled"} ></Input>
-          </FormGroup>
-          <FormGroup>
-            <label>Email</label>
-            <Input type="email" className="text-center" placeholder="Email" disabled={"disabled"} ></Input>
-          </FormGroup>
-          <FormGroup>
-            <label>Birthday</label>
-            <Input type="date" className="text-center" placeholder="birthday" disabled={"disabled"} ></Input>
-            <label>Gender</label>
-            <Input type="text" className="text-center" placeholder="gender" disabled={"disabled"} ></Input>
-          </FormGroup>
-          <FormGroup>
-            <label>Location</label>
-            <Input type="text" className="text-center" placeholder="Location" disabled={"disabled"} ></Input>
-          </FormGroup>
-          <Button className="btn-lg hello btn-block" onClick={this.hide}>Edit Profile</Button>
 
         </div>
-    
       </Form>
+
+      {/* Editing the page  */}
+      <Form className="login-form">
+      <div className={this.state.shouldHide ? "" : "hidden"}>
+      {/* <h1>Edit Account</h1> */}
+        <FormGroup>
+          <label>First Name</label>
+          <Input type="name" className="text-center" placeholder="First Name" value={this.state.firstName} onChange={this.onChangeFN}></Input>
+        </FormGroup>
+        <FormGroup>
+          <label>Last Name</label>
+          <Input type="name" className="text-center" placeholder="Last Name" value={this.state.lastName} onChange={this.onChangeLN}></Input>
+        </FormGroup>
+        <FormGroup>
+          <label>Email</label>
+          <Input type="email" className="text-center" placeholder="Email"  disabled={"disabled"} value={this.state.email} onChange={this.onChangeEmail}></Input>
+        </FormGroup>
+        <FormGroup>
+            <label>Birthday</label>
+            <Input type="date" className="text-center" placeholder="MM/YYYY" value={this.state.birthday} onChange={this.onChangeBD}></Input>            </FormGroup>
+          <FormGroup>
+          <div className="row">  
+            <div className="col-sm-5">
+              <label>Weight</label>
+              <Input type="number" className="text-center" placeholder="Weight" value={this.state.weight} onChange={this.onChangeWeight}></Input>
+            </div>  
+            <div className="col-sm-7">
+              <label>Gender</label>
+             <Input type="text" className="text-center" placeholder="gender (M or F)" value={this.state.gender} onChange={this.onChangeGEN} maxLength={1}></Input>
+            </div>
+          </div>
+        </FormGroup>
+        <FormGroup>
+          <label>Location</label>
+          <Input type="text" className="text-center" placeholder="Location" value={this.state.location} onChange={this.onChangeLOC}></Input>
+        </FormGroup>
+        <div className="text-center">
+          <Button className="btn-lg hello btn-block" type="button" onClick={this.onSendData}>Submit Changes</Button>
+        </div>
+      </div>
+    </Form>
+    </div>
     );
   }
 }

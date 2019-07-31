@@ -50,6 +50,10 @@ var UserSchema = new Schema({
     }, loggedIn: {
         default:false,
         type: Boolean
+    }, weight : {
+        type: Number, 
+        required: false, 
+        trim: true
     }
 },{
     collection: 'users'
