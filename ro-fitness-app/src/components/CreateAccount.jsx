@@ -128,35 +128,37 @@ class CreateAccount extends Component {
       <Form className="login-form">
         <div className={this.state.shouldHide ? "hidden" : ""}>
           <FormGroup>
-            <label>First Name</label>
+            {/* <label>First Name</label> */}
             <Input type="name" className="text-center" placeholder="First Name" value={this.state.firstName} onChange={this.onChangeFN}></Input>
           </FormGroup>
           <FormGroup>
-            <label>Last Name</label>
+            {/* <label>Last Name</label> */}
             <Input type="name" className="text-center" placeholder="Last Name" value={this.state.lastName} onChange={this.onChangeLN}></Input>
           </FormGroup>
           <FormGroup>
-            <label>Email</label>
+            {/* <label>Email</label> */}
             <Input type="email" className="text-center" placeholder="Email" value={this.state.email} onChange={this.onChangeEmail}></Input>
           </FormGroup>
           <FormGroup>
-              <label>Birthday</label>
+            <div className="text-center">
+              <label >Birthday</label>
+             </div> 
               <Input type="date" className="text-center" placeholder="MM/YYYY" value={this.state.birthday} onChange={this.onChangeBD}></Input>            </FormGroup>
             <FormGroup>
             <div className="row">  
-              <div className="col-sm-5">
-                <label>Weight</label>
+              <div className="col-sm-6">
+                {/* <label>Weight</label> */}
                 <Input type="number" className="text-center" placeholder="Weight" value={this.state.weight} onChange={this.onChangeWeight}></Input>
               </div>  
-              <div className="col-sm-7">
-                <label>Gender</label>
+              <div className="col-sm-6">
+                {/* <label>Gender</label> */}
                <Input type="text" className="text-center" placeholder="gender (M or F)" value={this.state.gender} onChange={this.onChangeGEN} maxLength={1}></Input>
               </div>
             </div>
            
           </FormGroup>
           <FormGroup>
-            <label>Location</label>
+            {/* <label>Location</label> */}
             <Input type="text" className="text-center" placeholder="Location" value={this.state.location} onChange={this.onChangeLOC}></Input>
           </FormGroup>
           <Button className="btn-lg hello btn-block" onClick={this.hide}>Next</Button>
@@ -165,11 +167,13 @@ class CreateAccount extends Component {
         <div className={this.state.shouldHide ? "" : "hidden"}>
           <FormGroup>
             <Input type="password" className="text-center" placeholder="Password" value={this.state.password} onChange={this.onChangePass} ></Input>
-          </FormGroup>
-          <h5>Password requirements:</h5>
+          </FormGroup >
+          <div className="text-center">
+          <h5 class="font-weight-bold">Password requirements:</h5>
           <p>At least 8 characters</p>
           <p>Includes 1 upper, 1 lower, 1 number</p>
           <p>No special characters</p>
+          </div>
           <FormGroup>
             <Input type="password" className="text-center" placeholder="Confirm Password" value={this.state.confirmPassword} onChange={this.onChangeConfirmPass}></Input>
           </FormGroup>

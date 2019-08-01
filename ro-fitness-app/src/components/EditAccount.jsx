@@ -125,35 +125,37 @@ class EditAccount extends Component {
         <div className={this.state.shouldHide ? "hidden" : ""}>
           {/* <h1>Account</h1> */}
           <FormGroup>
-            <label>First Name</label>
+            {/* <label>First Name</label> */}
             <Input type="name" className="text-center" placeholder="First Name" disabled={"disabled"} value={this.state.firstName} onChange={this.onChangeFN}></Input>
           </FormGroup>
           <FormGroup>
-            <label>Last Name</label>
+            {/* <label>Last Name</label> */}
             <Input type="name" className="text-center" placeholder="Last Name" disabled={"disabled"} value={this.state.lastName} onChange={this.onChangeLN}></Input>
           </FormGroup>
           <FormGroup>
-            <label>Email</label>
+            {/* <label>Email</label> */}
             <Input type="email" className="text-center" placeholder="Email" disabled={"disabled"} value={this.state.email} onChange={this.onChangeEmail}></Input>
           </FormGroup>
            <FormGroup>
+             <div className="text-center">
               <label>Birthday</label>
+              </div>
               <Input type="date" className="text-center" placeholder="MM/YYYY"  disabled={"disabled"} value={this.state.birthday} onChange={this.onChangeBD}></Input>            </FormGroup>
             <FormGroup>
             <div className="row">  
-              <div className="col-sm-5">
-                <label>Weight</label>
+              <div className="col-sm-6">
+                {/* <label>Weight</label> */}
                 <Input type="number" disabled={"disabled"} className="text-center" placeholder="Weight" value={this.state.weight} onChange={this.onChangeWeight}></Input>
               </div>  
-              <div className="col-sm-7">
-                <label>Gender</label>
+              <div className="col-sm-6">
+                {/* <label>Gender</label> */}
                <Input type="text" className="text-center" placeholder="gender (M or F)" disabled={"disabled"} value={this.state.gender} onChange={this.onChangeGEN} maxLength={1}></Input>
               </div>
             </div>
            
           </FormGroup>
           <FormGroup>
-            <label>Location</label>
+            {/* <label>Location</label> */}
             <Input type="text" className="text-center" placeholder="Location" disabled={"disabled"} value={this.state.location} onChange={this.onChangeLOC}></Input>
           </FormGroup>
 
@@ -168,34 +170,36 @@ class EditAccount extends Component {
       <div className={this.state.shouldHide ? "" : "hidden"}>
       {/* <h1>Edit Account</h1> */}
         <FormGroup>
-          <label>First Name</label>
+          {/* <label>First Name</label> */}
           <Input type="name" className="text-center" placeholder="First Name" value={this.state.firstName} onChange={this.onChangeFN}></Input>
         </FormGroup>
         <FormGroup>
-          <label>Last Name</label>
+          {/* <label>Last Name</label> */}
           <Input type="name" className="text-center" placeholder="Last Name" value={this.state.lastName} onChange={this.onChangeLN}></Input>
         </FormGroup>
         <FormGroup>
-          <label>Email</label>
+          {/* <label>Email</label> */}
           <Input type="email" className="text-center" placeholder="Email"  disabled={"disabled"} value={this.state.email} onChange={this.onChangeEmail}></Input>
         </FormGroup>
         <FormGroup>
+          <div className="text-center">
             <label>Birthday</label>
+            </div>
             <Input type="date" className="text-center" placeholder="MM/YYYY" value={this.state.birthday} onChange={this.onChangeBD}></Input>            </FormGroup>
           <FormGroup>
           <div className="row">  
-            <div className="col-sm-5">
-              <label>Weight</label>
+            <div className="col-sm-6">
+              {/* <label>Weight</label> */}
               <Input type="number" className="text-center" placeholder="Weight" value={this.state.weight} onChange={this.onChangeWeight}></Input>
             </div>  
-            <div className="col-sm-7">
-              <label>Gender</label>
+            <div className="col-sm-6">
+              {/* <label>Gender</label> */}
              <Input type="text" className="text-center" placeholder="gender (M or F)" value={this.state.gender} onChange={this.onChangeGEN} maxLength={1}></Input>
             </div>
           </div>
         </FormGroup>
         <FormGroup>
-          <label>Location</label>
+          {/* <label>Location</label> */}
           <Input type="text" className="text-center" placeholder="Location" value={this.state.location} onChange={this.onChangeLOC}></Input>
         </FormGroup>
         <div className="text-center">
