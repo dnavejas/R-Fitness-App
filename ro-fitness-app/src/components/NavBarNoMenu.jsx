@@ -10,9 +10,7 @@ import {
   Nav,
   NavbarBrand,
   UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  DropdownToggle
 } from "reactstrap";
 
 import "../App.css";
@@ -34,7 +32,7 @@ class HeaderNoMenu extends Component {
                 noGutters
                 className="position-relative w-100 align-items-center"
               >
-                <Col className="d-xs-flex d-sm-flex justify-content-start text-center">
+                {/* <Col className="d-xs-flex d-sm-flex justify-content-start text-center">
                   <Nav className="mrx-auto" navbar>
                     <UncontrolledDropdown
                       className="d-flex text-center"
@@ -46,9 +44,9 @@ class HeaderNoMenu extends Component {
                       </DropdownToggle>
                     </UncontrolledDropdown>
                   </Nav>
-                </Col>
+                </Col> */}
 
-                <Col className="">
+                <Col className="text-center">
                   <NavbarBrand className=" p-0" href="/" style={{ width: 10 }}>
                     <img
                       src={logo}

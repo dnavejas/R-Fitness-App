@@ -1,31 +1,40 @@
-import React, { Component, Fragment } from "react";
-import axios from "axios";
+import React, { Component } from "react";
+import { doAjaxThings } from "../javascript/google-sheets";
 
 class WorkoutPosts extends Component {
-  state = { post: null };
+  constructor(props) {
+    super(props);
 
-  componentDidMount() {
-    axios
-      .get(
-        "https://baconipsum.com/api/?type=meat-and-filler&paras=4&format=text"
-      )
-      .then(response => this.setState({ post: response.data }));
+    this.state = { GoogleSheetsData: [] };
+
+    // state google data
+    this.getGoogleSheetData = this.getGoogleSheetData.bind(this);
+  }
+
+  async componentDidMount() {
+    await this.getGoogleSheetData();
+  }
+
+  async getGoogleSheetData() {
+    const data = await doAjaxThings();
+
+    // console.dir(parsedData.values);
+
+    this.setState({
+      GoogleSheetsData: data
+    });
+    console.log(this.state.GoogleSheetsData);
   }
 
   render() {
     return (
-      <Fragment>
-        {this.state.post && (
-          <main className="position-relative">
-            <article
-              className="pt-5 text-secondary text-justify"
-              style={{ fontSize: "0.9rem", whiteSpace: "pre-line" }}
-            >
-              {this.state.post}
-            </article>
-          </main>
-        )}
-      </Fragment>
+      <div>
+        {this.state.GoogleSheetsData.map(item => {
+          // console.log(item);
+
+          return <div>{item}</div>;
+        })}
+      </div>
     );
   }
 }

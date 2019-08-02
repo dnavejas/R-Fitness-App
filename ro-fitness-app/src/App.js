@@ -5,7 +5,7 @@
 
 // import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import React, { Fragment } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import WorkoutPosts from "./components/Workout-post";
 import NavBar from "./components/NavBar";
 import Login from "./components/Login";
@@ -15,11 +15,12 @@ import SpeedWall from "./components/Speed-wall";
 import PersonalRecords from "./components/Personal-Records";
 import Welcome from "./components/Welcome";
 import TrainingLog from "./components/TrainingLog";
+import LogWorkout from "./components/LogWorkout";
 import "./App.css";
 import EditAccount from "./components/EditAccount";
 
 // class App extends Component {
-//   render() { 
+//   render() {
 //     return (
 //       <Router>
 //       <Fragment>
@@ -64,12 +65,19 @@ const App = () => (
       <Route path="/:id" component={NavBar} />
       <Route path="/Create-account" exact={true} component={CreateAccount} />
       <Route path="/Forgot-password" exact={true} component={ForgotPassword} />
-      <Route path="/Profile" exact={true} component={EditAccount} />
-      <Route path="/Welcome" exact={true} component={Welcome} />
-      <Route path="/Workouts" exact={true} component={WorkoutPosts} />
-      <Route path="/Speedwall" exact={true} component={SpeedWall} />
-      <Route path="/Traininglogs" exact={true} component={TrainingLog} />
-      <Route path="/Personalrecords" exact={true} component={PersonalRecords} />
+      <Switch>
+        <Route path="/Profile" exact={true} component={EditAccount} />
+        <Route path="/Welcome" exact={true} component={Welcome} />
+        <Route path="/Workouts" exact={true} component={WorkoutPosts} />
+        <Route path="/Speedwall" exact={true} component={SpeedWall} />
+        <Route path="/Concept2" exact={true} component={LogWorkout} />
+        <Route path="/Traininglogs" exact={true} component={TrainingLog} />
+        <Route
+          path="/Personalrecords"
+          exact={true}
+          component={PersonalRecords}
+        />
+      </Switch>
     </Fragment>
   </Router>
 );
